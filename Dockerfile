@@ -7,8 +7,10 @@
 FROM serversideup/php:8.3-fpm-nginx-alpine as base
 
 # Uncomment if you need to install additional PHP extensions
-USER root
-RUN apk update && apk add iputils
+# USER root
+# RUN apk update && apk add iputils
+
+COPY --chmod=755 ./entrypoint/ /entrypoint/
 
 ############################################
 # Development Image

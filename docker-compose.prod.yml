@@ -71,6 +71,7 @@ services:
   horizon:
     image: ${SPIN_IMAGE_NAME} # 👈 Change this if you're not using `spin deploy`
     command: ["php", "/var/www/html/artisan", "horizon"]
+    stop_grace_period: 30s
     environment:
       PHP_OPCACHE_ENABLE: "1"
     networks:

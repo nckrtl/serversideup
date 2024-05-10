@@ -13,7 +13,7 @@ class SSULongRunningJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    protected $time = 90;
+    protected $time = 10;
     protected $version;
 
     /**
