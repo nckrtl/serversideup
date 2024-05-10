@@ -26,7 +26,7 @@ class SSULongRunningJob implements ShouldQueue
      */
     public function handle(): void
     {
-        for ($i = 0; $i < 45; $i++) {
+        for ($i = 0; $i < 90; $i++) {
             \Log::info('SSULongRunningJob has been processed ' . now().' on version '.config('services.ssu_version'));
             sleep(1);
         }
