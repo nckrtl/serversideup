@@ -4,7 +4,6 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
-        command: ["php", "artisan", "migrate", "--force"]
         environment:
             - PHP_FPM_POOL_NAME=serversideup_web
             - PHP_OPCACHE_ENABLE=1
@@ -54,11 +53,16 @@ services:
             - VITE_APP_NAME="${APP_NAME}"
         expose:
             - 8080
+        depends_on:
+            - mysql
+            - redis
+            - serversideup-horizon
 
     serversideup-horizon:
         build:
             context: .
             dockerfile: Dockerfile-fpm
+        stop_grace_period: 45s
         environment:
             - PHP_FPM_POOL_NAME=serversideup_horizon
             - PHP_OPCACHE_ENABLE=1
