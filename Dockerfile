@@ -6,9 +6,9 @@
 # https://serversideup.net/open-source/docker-php/
 FROM serversideup/php:8.3-fpm-nginx-alpine as base
 
-## Uncomment if you need to install additional PHP extensions
-# USER root
-# RUN install-php-extensions bcmath gd
+# Uncomment if you need to install additional PHP extensions
+USER root
+RUN apk update && apk add iputils
 
 ############################################
 # Development Image

@@ -28,7 +28,7 @@
             </a>
 
             <h2 class="font-bold text-3xl mt-5">View Horizon Dashboard</h2>
-            <a href="/" target="_blank">
+            <a href="/horizon" target="_blank">
                 <button class="rounded-md bg-yellow-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600">View Horizon Dashboard</button>
             </a>
     </body>
