@@ -15,6 +15,12 @@ docker run --rm -v $(pwd):/var/www/html serversideup/php:8.3-cli composer instal
 cp .env.example .env
 ```
 
+## Add entries to /etc/hosts
+Add these to your **local** `/etc/hosts` file:
+```bash
+127.0.0.1 laravel.dev.test
+```
+
 ## Generate application key
 ```bash
 bash vendor/bin/spin run php php artisan key:generate
@@ -29,3 +35,7 @@ bash vendor/bin/spin run php php artisan migrate
 ```bash
 bash vendor/bin/spin up
 ```
+
+## Access URLS
+- Web: [http://laravel.dev.test](http://laravel.dev.test)
+- Horizon: [http://laravel.dev.test/horizon](http://laravel.dev.test/horizon)
