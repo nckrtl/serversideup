@@ -15,7 +15,7 @@ class SSULongRunningJob implements ShouldQueue
 
     protected $time = 90;
     protected $version = config('services.ssu_version');
-    
+
     /**
      * Create a new job instance.
      */
@@ -29,7 +29,7 @@ class SSULongRunningJob implements ShouldQueue
      */
     public function handle(): void
     {
-        for ($i = 0; $i < 90; $i++) {
+        for ($i = 0; $i < $this->time; $i++) {
             \Log::info('SSULongRunningJob has been processed ' . now().' on version '.config('services.ssu_version'));
             sleep(1);
         }
