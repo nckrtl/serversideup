@@ -3,11 +3,6 @@ USER www-data
 COPY --chown=www-data:www-data . .
 WORKDIR /var/www/html
 RUN composer install
-RUN touch database/database.sqlite
-RUN php artisan migrate --force
-
-RUN chmod +x entrypoint.sh
-ENTRYPOINT ["./entrypoint.sh"]
 
 # uncomment the following lines if you want to use s6-overlay, you'll see it wont trigger the trap upon stopping the container
 # ENV S6_CMD_WAIT_FOR_SERVICES=1
