@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "660eff90e394b83b86770da99ea0603c",
+    "content-hash": "53ee5024b44926b9aec066b30a43e3d9",
     "packages": [
         {
             "name": "brick/math",
@@ -8589,6 +8589,51 @@
             "time": "2023-02-07T11:34:05+00:00"
         },
         {
+            "name": "serversideup/spin",
+            "version": "dev-75-spin-deploy-allow-deployments-without-cicd",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/serversideup/spin.git",
+                "reference": "133d6eb2ce4efb84ac9b9dcd58262fc01a39c156"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/serversideup/spin/zipball/133d6eb2ce4efb84ac9b9dcd58262fc01a39c156",
+                "reference": "133d6eb2ce4efb84ac9b9dcd58262fc01a39c156",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/spin"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Pastori",
+                    "homepage": "https://twitter.com/danpastori"
+                },
+                {
+                    "name": "Jay Rogers",
+                    "homepage": "https://twitter.com/jaydrogers"
+                }
+            ],
+            "description": "Replicate your production environment locally using Docker. Just run \"spin up\". It's really that easy.",
+            "support": {
+                "issues": "https://github.com/serversideup/spin/issues",
+                "source": "https://github.com/serversideup/spin/tree/75-spin-deploy-allow-deployments-without-cicd"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/serversideup",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-05-10T21:38:22+00:00"
+        },
+        {
             "name": "spatie/backtrace",
             "version": "1.6.1",
             "source": {
@@ -9078,7 +9123,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "serversideup/spin": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
