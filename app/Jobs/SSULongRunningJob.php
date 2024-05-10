@@ -13,6 +13,9 @@ class SSULongRunningJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    protected $time = 90;
+    protected $version = config('services.ssu_version');
+    
     /**
      * Create a new job instance.
      */
