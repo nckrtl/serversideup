@@ -35,4 +35,6 @@ return [
         ],
     ],
 
+    'ssu_version' => 'A'
+
 ];
