@@ -1,7 +1,5 @@
 #!/bin/bash
 
-exec php /var/www/html/artisan migrate --force
-
 stop_horizon() {
   echo "Stopping horizon..."
   # curl -X POST -H 'Content-type: application/json' --data '{"text":":skull: terminating horizon"}' 'https://hooks.slack.com/services/REDACTED_TOKEN'

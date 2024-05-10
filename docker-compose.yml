@@ -4,6 +4,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
+        command: ["php", "artisan", "migrate", "--force"]
         environment:
             - PHP_FPM_POOL_NAME=serversideup_web
             - PHP_OPCACHE_ENABLE=1
