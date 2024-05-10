@@ -2,7 +2,7 @@
 
 stop_horizon() {
   echo "Stopping horizon..."
-  curl -X POST -H 'Content-type: application/json' --data '{"text":":skull: terminating horizon"}' 'https://hooks.slack.com/services/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'
+  # curl -X POST -H 'Content-type: application/json' --data '{"text":":skull: terminating horizon"}' 'https://hooks.slack.com/services/REDACTED_TOKEN'
   php /var/www/html/artisan horizon:terminate
   sleep 5
   exit 0
