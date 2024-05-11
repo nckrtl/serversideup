@@ -9,3 +9,8 @@ services:
   php:
     depends_on:
       - traefik
+  
+  horizon:
+    entrypoint: "/entrypoint/horizon.sh"
+    depends_on:
+      - redis
