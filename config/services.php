@@ -35,6 +35,6 @@ return [
         ],
     ],
 
-    'ssu_version' => 'A'
+    'ssu_version' => '1'
 
 ];
